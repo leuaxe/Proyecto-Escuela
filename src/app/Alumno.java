@@ -27,4 +27,9 @@ public class Alumno extends Persona{
     public void setNotaMedia(double notaMedia) {
         this.notaMedia = notaMedia;
     }
+
+    
+    public String imprime(){
+        return super.imprime() + " ,Curso: " + getCurso() + ", notaMedia: " + getNotaMedia();
+    }
 }
