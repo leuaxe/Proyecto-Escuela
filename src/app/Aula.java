@@ -36,4 +36,27 @@ public class Aula{
     public void setIdAula(String idAula) {
         this.idAula = idAula;
     }
+
+    public double getNotaMediaAula(){
+        double total = 0.0;
+        for (Alumno alumno : alumnos) {
+            if (alumno instanceof Delegado) {
+                Delegado de = (Delegado)alumno;
+                total += 0.1 * de.getValoracion();
+                total += alumno.getNotaMedia();
+            } else{
+                total += alumno.getNotaMedia();
+            }
+        }
+
+        return total/alumnos.length;
+    }
+
+    public void imprimeListadoAlumnos(){
+        System.out.println("-----------------" + this.getIdAula()+"----------------");
+        System.out.println("-------------------------------------------------------");
+        for (Alumno alumno : alumnos) {
+            alumno.imprime();
+        }
+    }
 }
