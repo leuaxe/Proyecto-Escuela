@@ -36,4 +36,13 @@ public class Colegio{
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+
+    public double getNotaMediaTotal(){
+        double total = 0.0;
+        for (Aula aula : aulas) {
+            total += aula.getNotaMediaAula();
+        }
+
+        return (total/aulas.length)*(this.getDirector().getValoracion()*0.3);
+    }
 }
