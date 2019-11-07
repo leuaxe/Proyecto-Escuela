@@ -1,5 +1,7 @@
 package app;
 
+import java.rmi.server.RemoteStub;
+
 public class Colegio{
     private Aula[] aulas;
     private Director director;
@@ -44,5 +46,18 @@ public class Colegio{
         }
 
         return (total/aulas.length)*(this.getDirector().getValoracion()*0.3);
+    }
+
+    public Alumno getMejorAlumnoColegio(){
+        Alumno mejorAlumno = new Alumno();
+        double mejorNota = 0.0;
+        for (Aula aula : aulas) {
+            if (aula.getMejorAlumno().getNotaMedia() > mejorNota) {
+                mejorAlumno = aula.getMejorAlumno();
+                mejorNota = mejorAlumno.getNotaMedia();
+            }
+        }
+
+        return mejorAlumno;
     }
 }
