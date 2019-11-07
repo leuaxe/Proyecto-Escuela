@@ -60,7 +60,7 @@ public class Aula{
         }
     }
 
-    public Alumno getMejor(){
+    public Alumno getMejorAlumno(){
         Alumno mejorAlumno = new Alumno();
         double mejorNota = 0.0;
         for (Alumno alumno : alumnos) {
