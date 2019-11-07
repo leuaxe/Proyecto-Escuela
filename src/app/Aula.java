@@ -59,4 +59,17 @@ public class Aula{
             alumno.imprime();
         }
     }
+
+    public Alumno getMejor(){
+        Alumno mejorAlumno = new Alumno();
+        double mejorNota = 0.0;
+        for (Alumno alumno : alumnos) {
+            if (alumno.getNotaMedia() > mejorNota) {
+                mejorNota = alumno.getNotaMedia();
+                mejorAlumno = alumno;
+            }
+        }
+
+        return mejorAlumno;
+    }
 }
