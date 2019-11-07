@@ -30,6 +30,6 @@ public class Alumno extends Persona{
 
     public void imprime(){
         super.imprime();
-        System.out.print(" ,Curso: " + this.curso + ", notaMedia: " + this.notaMedia);
+        System.out.println(" ,Curso: " + this.curso + ", notaMedia: " + this.notaMedia);
     }
 }

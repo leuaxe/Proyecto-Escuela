@@ -43,7 +43,7 @@ public class Colegio{
             total += aula.getNotaMediaAula();
         }
 
-        return (total/aulas.length)*(this.getDirector().getValoracion()*0.3);
+        return (total/aulas.length)+(this.getDirector().getValoracion()*0.3);
     }
 
     public Alumno getMejorAlumnoColegio(){
