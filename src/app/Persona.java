@@ -39,7 +39,7 @@ public abstract class Persona{
         this.dni = dni;
     }
 
-    public String imprime(){
-        return "nombre: " + this.nombre + " , apellido: " + this.apellido + " , dni: " + this.dni;
+    public void imprime(){
+        System.out.print("nombre: " + this.nombre + " , apellido: " + this.apellido + " , dni: " + this.dni);
     }
 }

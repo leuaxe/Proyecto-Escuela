@@ -28,8 +28,8 @@ public class Alumno extends Persona{
         this.notaMedia = notaMedia;
     }
 
-    
-    public String imprime(){
-        return super.imprime() + " ,Curso: " + getCurso() + ", notaMedia: " + getNotaMedia();
+    public void imprime(){
+        super.imprime();
+        System.out.print(" ,Curso: " + this.curso + ", notaMedia: " + this.notaMedia);
     }
 }
