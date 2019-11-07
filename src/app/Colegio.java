@@ -1,7 +1,5 @@
 package app;
 
-import java.rmi.server.RemoteStub;
-
 public class Colegio{
     private Aula[] aulas;
     private Director director;
@@ -59,5 +57,17 @@ public class Colegio{
         }
 
         return mejorAlumno;
+    }
+
+    public void imprimirEstatistica(){
+        System.out.println("Resumen de las estadisticas del colegio " + this.getNombre());
+        System.out.print("El mejor Alumno del colegio es: ");
+        this.getMejorAlumnoColegio().imprime();
+
+        if (this.getNotaMediaTotal() > 5.0) {
+            System.out.println("El colegio esta listo para recibir la subencion con una nota media total de " + this.getNotaMediaTotal());
+        } else{
+            System.out.println("El colegio es una mierda no recibe subencion por baja nota " + this.getNotaMediaTotal());
+        }
     }
 }
